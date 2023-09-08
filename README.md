@@ -1,3 +1,3 @@
 # ubuntu-script
 
-` wget -q -O - https://raw.githubusercontent.com/brucemelo/ubuntu-script/main/dev-install.sh `
+` wget -q -O - https://raw.githubusercontent.com/brucemelo/ubuntu-script/main/dev-install.sh | bash ` 
