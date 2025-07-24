@@ -4,7 +4,8 @@ sudo apt-get upgrade -y
 
 sudo apt install vim -y
 sudo apt install curl -y
-sudo apt install chromium-browser -y
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+sudo apt install ./google-chrome-stable_current_amd64.deb
 sudo apt install git -y
 sudo apt install gparted -y
 
