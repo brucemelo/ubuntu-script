@@ -41,8 +41,16 @@ nvm install --lts
 # docker
 sudo apt install -y apt-transport-https ca-certificates curl software-properties-common
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
-echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu $(grep 'UBUNTU_CODENAME' /etc/os-release | cut -d'=' -f2) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 sudo apt update
 sudo apt install -y docker-ce
 sudo usermod -aG docker ${USER}
-echo "Dev install finished!"
+
+# virtualbox
+sudo apt-get install virtualbox-7.1
+
+#  gp-saml-gui
+sudo apt install python3-gi gir1.2-gtk-3.0 'gir1.2-webkit2-4.*'
+pip3 install https://github.com/dlenski/gp-saml-gui/archive/master.zip
+
+
