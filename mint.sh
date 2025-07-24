@@ -47,10 +47,10 @@ sudo apt install -y docker-ce
 sudo usermod -aG docker ${USER}
 
 # virtualbox
-sudo apt-get install virtualbox-7.1
+sudo apt install -y virtualbox-7.1
 
 #  gp-saml-gui
-sudo apt install python3-gi gir1.2-gtk-3.0 'gir1.2-webkit2-4.*'
+sudo apt install -y python3-gi gir1.2-gtk-3.0 'gir1.2-webkit2-4.*'
 pip3 install https://github.com/dlenski/gp-saml-gui/archive/master.zip
 
 
