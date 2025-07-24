@@ -4,10 +4,16 @@ sudo apt-get upgrade -y
 
 sudo apt install vim -y
 sudo apt install curl -y
-wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-sudo apt install ./google-chrome-stable_current_amd64.deb
 sudo apt install git -y
 sudo apt install gparted -y
+
+# google chrome
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+sudo apt install ./google-chrome-stable_current_amd64.deb
+
+# zoom
+wget https://zoom.us/client/latest/zoom_amd64.deb
+sudo apt install ./zoom_amd64.deb
 
 # sops
 SOPS_VERSION=$(curl -s "https://api.github.com/repos/getsops/sops/releases/latest" | grep -Po '"tag_name": "\K[^"]*')
@@ -37,7 +43,6 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
 nvm install --lts
 
-
 # docker
 sudo apt install -y apt-transport-https ca-certificates curl software-properties-common
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
@@ -46,11 +51,5 @@ sudo apt update
 sudo apt install -y docker-ce
 sudo usermod -aG docker ${USER}
 
-# virtualbox
-sudo apt install -y virtualbox-7.1
-
-#  gp-saml-gui
-sudo apt install -y python3-gi gir1.2-gtk-3.0 'gir1.2-webkit2-4.*'
-pip3 install https://github.com/dlenski/gp-saml-gui/archive/master.zip
 
 
