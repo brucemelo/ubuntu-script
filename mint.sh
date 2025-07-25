@@ -8,12 +8,12 @@ sudo apt install git -y
 sudo apt install gparted -y
 
 # google chrome
-wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-sudo apt install ./google-chrome-stable_current_amd64.deb
+sudo wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+sudo apt install -y ./google-chrome-stable_current_amd64.deb
 
 # zoom
-wget https://zoom.us/client/latest/zoom_amd64.deb
-sudo apt install ./zoom_amd64.deb
+sudo wget https://zoom.us/client/latest/zoom_amd64.deb
+sudo apt install -y ./zoom_amd64.deb
 
 # sops
 SOPS_VERSION=$(curl -s "https://api.github.com/repos/getsops/sops/releases/latest" | grep -Po '"tag_name": "\K[^"]*')
